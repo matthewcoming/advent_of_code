@@ -1,4 +1,3 @@
-#/bin/bash python3
 # Matthew Coming
 # Advent of Code 2023
 
