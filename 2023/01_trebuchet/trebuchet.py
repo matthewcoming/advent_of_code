@@ -28,16 +28,24 @@
 # Consider your entire calibration document. What is the sum of all of the calibration values?
 
 
+# Greater than 36133
+
 if __name__ == "__main__":
     # get lines of input
     with open("input.txt") as f:
         content = f.readlines() 
-# get 
-    digits = defaultdict(str)
+    
+    # setup 2d array
+    numbers = [[] for i in range(len(content))]
+    calibrations = []
+    # for each line
     for idx, line in enumerate(content):
-        for char in line
+        for char in line:
+            # filter its integers
             if char.isdigit():
-                digits.append([])
-    if len(digits) % 2 != 0:
-        raise ValueError("Odd number of digits")
-    print(digits[0] + digits[-1]) 
+                numbers[idx].append(int(char))
+        if len(numbers[idx]) >= 2:
+            # store first and last as a 2 digit base 10 number
+            calibrations.append(10*numbers[idx][0] + numbers[idx][-1])
+
+    print(sum(calibrations)) 
