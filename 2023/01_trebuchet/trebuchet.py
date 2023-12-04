@@ -44,7 +44,7 @@ if __name__ == "__main__":
             # filter its integers
             if char.isdigit():
                 numbers[idx].append(int(char))
-        if len(numbers[idx]) >= 2:
+        if len(numbers[idx]) >= 1:
             # store first and last as a 2 digit base 10 number
             calibrations.append(10*numbers[idx][0] + numbers[idx][-1])
 
